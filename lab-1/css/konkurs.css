@@ -1,0 +1,146 @@
+body {
+  max-width: 500px;
+  margin: auto;
+}
+#toggle-theme {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 30px;
+  cursor: pointer;
+  display: inline-block;
+}
+#form {
+  padding: 1rem;
+  border-style: groove;
+  border-radius: 25px;
+}
+form input:not([type='radio']):not([type='checkbox']) {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-family: system-ui, sans-serif;
+}
+form label {
+  font-size: 16px;
+  font-family: system-ui, sans-serif;
+}
+
+form select {
+  width: 100%;
+  margin-bottom: 10px;
+}
+fieldset {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+fieldset label {
+  display: inline;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  float: none;
+  margin: 0;
+}
+
+button {
+  background-color: #4caf50;
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-style: groove;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 12px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
+  cursor: pointer;
+}
+
+form label:hover {
+  cursor: pointer;
+}
+legend:hover {
+  cursor: pointer;
+}
+form input:hover {
+  cursor: pointer;
+}
+form select {
+  cursor: pointer;
+}
+
+#form {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+#toggle-theme {
+  cursor: pointer;
+}
+
+#theme-toggle:checked ~ #form {
+  background-color: #333;
+  color: #fff;
+  border-color: #666;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#theme-toggle:checked ~ #form input,
+#theme-toggle:checked ~ #form select,
+#theme-toggle:checked ~ #form button,
+#theme-toggle:checked ~ #form fieldset {
+  background-color: #444;
+  color: #fff;
+  border-color: #777;
+}
+
+#theme-toggle:checked ~ #form button {
+  background-color: #4caf50;
+  color: white;
+}
+
+#theme-toggle:checked ~ #form button:hover {
+  background-color: #3e8e41;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+h1 label#toggle-theme {
+  order: 2;
+}
+
+h1 input#theme-toggle {
+  order: 3;
+}
+
+h1::after {
+  content: '';
+  flex-basis: 100%;
+}
