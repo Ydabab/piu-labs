@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: system-ui, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.galeria {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1200px) {
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1600px) {
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+  background: #fff;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: filter 0.3s ease;
+}
+
+img:hover {
+  filter: brightness(1.05);
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
