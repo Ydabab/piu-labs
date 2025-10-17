@@ -1,0 +1,106 @@
+/* Reset stylów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightgrey;
+}
+main,
+aside {
+  h1,
+  h2,
+  h3,
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+}
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  display: grid;
+  grid-template-rows: [góra] auto [header] auto [nav] auto [main] auto [aside] auto [footer];
+  grid-template-columns: [lbok] auto [centrum] 20% [sidebar];
+}
+.container *:not(p, h1, h2, h3) {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.container > header {
+  grid-area: góra / lbok / header / sidebar;
+  background-color: #f49c11;
+  padding-left: 1rem;
+  h1 {
+    display: inline;
+    color: white;
+    padding-left: 1rem;
+  }
+  .logo {
+    display: inline;
+    border-style: none;
+    padding: 8px;
+    background-color: white;
+    vertical-align: 25%;
+  }
+  .logo::before {
+    content: 'Logo';
+  }
+}
+.container > nav {
+  grid-area: header / lbok / nav / sidebar;
+  padding-left: 1rem;
+  background-color: #2980b9;
+  text-align: center;
+  @media (min-width: 1024px) {
+    text-align: left;
+  }
+}
+.container > main {
+  grid-area: nav / lbok / main / sidebar;
+  padding-left: 1rem;
+  background-color: white;
+  @media (min-width: 1024px) {
+    grid-area: nav / lbok / aside / centrum;
+  }
+}
+.container > aside {
+  grid-area: main / lbok / aside / sidebar;
+  background-color: #d4efdf;
+  padding-left: 1rem;
+  @media (min-width: 1024px) {
+    grid-area: nav / centrum / aside / sidebar;
+  }
+}
+.container > footer {
+  grid-area: aside / lbok / footer / sidebar;
+  background-color: #27ae60;
+  padding-left: 1rem;
+  text-align: center;
+}
+a {
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+aside div {
+  text-align: center;
+}
+span {
+  font-size: 8vw;
+  @media (min-width: 1024px) {
+    font-size: 5vw;
+  }
+}
+h3 {
+  font-weight: bold;
+}
+footer p {
+  color: white;
+  font-weight: bold;
+}
