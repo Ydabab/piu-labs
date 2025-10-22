@@ -1,0 +1,195 @@
+:root {
+  --color: none;
+  --red: #d32f2f;
+  --blue: #1e5a9c;
+  --green: #388e3c;
+  --yellow: #fbc02d;
+}
+
+body {
+  background-color: lightgrey;
+  min-width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-top: 1rem;
+  gap: 1rem;
+}
+
+body:has(input[value='red']:checked) {
+  --color: var(--red);
+}
+body:has(input[value='blue']:checked) {
+  --color: var(--blue);
+}
+body:has(input[value='green']:checked) {
+  --color: var(--green);
+}
+body:has(input[value='yellow']:checked) {
+  --color: var(--yellow);
+}
+
+#opis:has(input[value='S']:checked) + #foto img {
+  width: 70%;
+}
+#opis:has(input[value='M']:checked) + #foto img {
+  width: 80%;
+}
+#opis:has(input[value='L']:checked) + #foto img {
+  width: 90%;
+}
+#opis:has(input[value='XL']:checked) + #foto img {
+  width: 100%;
+}
+
+body:has(input[value='blue']:checked) #foto .blue {
+  display: block;
+}
+body:has(input[value='red']:checked) #foto .red {
+  display: block;
+}
+body:has(input[value='green']:checked) #foto .green {
+  display: block;
+}
+body:has(input[value='yellow']:checked) #foto .yellow {
+  display: block;
+}
+
+h2 {
+  line-height: 1.5rem;
+  width: 100%;
+  font-size: 1.25rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+span {
+  background-color: var(--color);
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+#foto {
+  background-color: white;
+  aspect-ratio: 1/1;
+  order: 1;
+  max-width: 500px;
+  min-width: 400px;
+  border-style: solid;
+  border-color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+#foto img {
+  max-width: 500px;
+  display: none;
+}
+
+#opis {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  max-width: 300px;
+  min-width: 300px;
+  order: 2;
+}
+
+#cena {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+button {
+  background-color: var(--color);
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+.colors {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 3px solid #555;
+  background-color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+
+.blue::before {
+  background-color: var(--blue);
+}
+.red::before {
+  background-color: var(--red);
+}
+.green::before {
+  background-color: var(--green);
+}
+.yellow::before {
+  background-color: var(--yellow);
+}
+
+input[value='blue']:checked + .circle::before,
+input[value='red']:checked + .circle::before,
+input[value='green']:checked + .circle::before,
+input[value='yellow']:checked + .circle::before {
+  border: 3px solid lightgrey;
+  background-color: var(--color);
+}
+
+.sizes {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.size {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #555;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-family: sans-serif;
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+}
+
+input[name='size']:checked + .size {
+  background-color: var(--color);
+  color: #000;
+}
