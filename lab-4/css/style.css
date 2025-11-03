@@ -1,19 +1,126 @@
 /* Minimalny reset  */
 html {
-  font-size: 16px; /* bazowy rozmiar czcionki */
-  font-family: system-ui, sans-serif; /* font systemowy */
-  line-height: 1.5; /* lepsza czytelność */
+  font-size: 16px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
 }
+
 body {
   margin: 1rem;
   padding: 0;
+  background-color: grey;
 }
 
 a {
-  color: #0066cc; /* niebieski kolor linków */
-  text-decoration: none; /* bez podkreślenia */
+  color: #0066cc;
+  text-decoration: none;
   font-size: 1.4rem;
 }
 a:hover {
-  text-decoration: underline; /* podkreślenie przy najechaniu */
+  text-decoration: underline;
+}
+
+/* Układ kontenera */
+.container {
+  display: grid;
+  margin: auto;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: auto 1fr;
+  grid-column-gap: 5%;
+  grid-row-gap: 2rem;
+  padding: 1rem;
+}
+
+/* Nagłówki kolumn */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.8rem;
+  background-color: white;
+  border-radius: 20px;
+  border: 3px;
+  border-style: solid;
+}
+
+.header .buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.header .counter {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  background-color: lightblue;
+  margin: 0;
+}
+.columntitle {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+/* Kolumny */
+.board {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200px;
+  gap: 1rem;
+  border: 3px;
+  border-style: solid;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Guziki */
+button {
+  border-radius: 100%;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid #333;
+}
+
+/* Karty */
+.shape {
+  border-radius: 6px;
+  width: 80%;
+  min-height: 3rem;
+  cursor: pointer;
+  row-gap: 0.5rem;
+  transition: transform 0.2s, background-color 0.3s;
+  border: 3px solid black;
+  position: relative;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Tekst karty */
+.shape .tekst {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  outline: none;
+  white-space: pre-wrap;
+  word-break: break-word;
+  display: block;
+}
+
+/* Przyciski w karcie */
+.KarteczkiButtony {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }

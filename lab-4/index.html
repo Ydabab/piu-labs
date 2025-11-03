@@ -2,11 +2,43 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab 4</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Lab 4</h1>
-    <a href="..">Powrót</a>
+    <div class="container">
+      <div class="header">
+        <p class="columntitle">Do zrobienia</p>
+        <p id="ToDoCounter" class="counter">0</p>
+        <div class="buttons">
+          <button class="newcard">➕</button>
+          <button class="columncolor">🎨</button>
+          <button class="sort">📶</button>
+        </div>
+      </div>
+      <div class="header">
+        <p class="columntitle">W trakcie</p>
+        <p id="InProgressCounter" class="counter">0</p>
+        <div class="buttons">
+          <button class="newcard">➕</button>
+          <button class="columncolor">🎨</button>
+          <button class="sort">📶</button>
+        </div>
+      </div>
+      <div class="header">
+        <p class="columntitle">Wykonane</p>
+        <p id="DoneCounter" class="counter">0</p>
+        <div class="buttons">
+          <button class="newcard">➕</button>
+          <button class="columncolor">🎨</button>
+          <button class="sort">📶</button>
+        </div>
+      </div>
+      <div class="board" id="ToDoBoard"></div>
+      <div class="board" id="InProgressBoard"></div>
+      <div class="board" id="DoneBoard"></div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
