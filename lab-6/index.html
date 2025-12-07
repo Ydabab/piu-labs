@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ajax Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>AJAX Demo</h1>
+
+    <div class="buttons">
+      <button id="btn-load">Pobierz dane</button>
+      <button id="btn-error">Pobierz z błędem</button>
+      <button id="btn-reset">Reset</button>
+    </div>
+    <h2>Pobrane elementy:</h2>
+    <div class="download">
+      <div id="loader" class="loader hidden">Ładowanie...</div>
+
+      <div id="error-box" class="error hidden"></div>
+      <ul id="list"></ul>
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
