@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab-7 - Karty produktów</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <h1>Sklep odzieżowy</h1>
+
+    <div class="products">
+      <product-card>
+        <img slot="image" src="img/koszulka.jpg" alt="Koszulka 1" />
+        <span slot="name">Koszulka Basic</span>
+        <span slot="price">79 PLN</span>
+        <span slot="colors" class="color" style="background: white"></span>
+        <span slot="colors" class="color" style="background: grey"></span>
+        <span slot="colors" class="color" style="background: black"></span>
+
+        <div slot="sizes">
+          <span>S</span>
+          <span>M</span>
+          <span>L</span>
+        </div>
+        <span slot="promo">-20%</span>
+      </product-card>
+
+      <product-card>
+        <img slot="image" src="img/koszulka_sport.jpg" alt="Koszulka 2" />
+        <span slot="name">Koszulka Sport</span>
+        <span slot="price">99 PLN</span>
+        <span slot="colors" class="color" style="background: navy"></span>
+        <span slot="colors" class="color" style="background: black"></span>
+        <div slot="sizes">
+          <span>M</span>
+          <span>L</span>
+          <span>XL</span>
+        </div>
+      </product-card>
+
+      <product-card>
+        <img slot="image" src="img/bluza.jpg" alt="Bluza z Kapturem" />
+        <span slot="name">Bluza z Kapturem</span>
+        <span slot="price">149 PLN</span>
+        <div slot="sizes">
+          <span>S</span>
+          <span>M</span>
+          <span>L</span>
+        </div>
+        <span slot="promo">-10%</span>
+      </product-card>
+
+      <product-card>
+        <img slot="image" src="img/jeans.jpg" alt="Spodnie Jeans" />
+        <span slot="name">Spodnie Jeans</span>
+        <span slot="price">129 PLN</span>
+        <span slot="colors" class="color" style="background: lightblue"></span>
+        <span slot="colors" class="color" style="background: black"></span>
+        <div slot="sizes">
+          <span>30</span>
+          <span>32</span>
+          <span>34</span>
+        </div>
+      </product-card>
+
+      <product-card>
+        <img slot="image" src="img/kurtka.jpg" alt="Kurtka Zimowa" />
+        <span slot="name">Kurtka Zimowa</span>
+        <span slot="price">299 PLN</span>
+      </product-card>
+
+      <product-card>
+        <img slot="image" src="img/czapka.jpg" alt="Czapka Zimowa" />
+        <span slot="name">Czapka Zimowa</span>
+        <span slot="price">49 PLN</span>
+        <span slot="colors" class="color" style="background: black"></span>
+        <span slot="colors" class="color" style="background: darkred"></span>
+      </product-card>
+    </div>
+  </body>
+</html>
