@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Koszulka Basic",
+    "price": 79,
+    "image": "img/koszulka.jpg",
+    "colors": ["red", "blue", "black"],
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "id": 2,
+    "name": "Koszulka Sport",
+    "price": 99,
+    "image": "img/koszulka_sport.jpg",
+    "sizes": ["M", "L", "XL"]
+  },
+  {
+    "id": 3,
+    "name": "Bluza z Kapturem",
+    "price": 149,
+    "image": "img/bluza.jpg",
+    "colors": ["gray", "black"]
+  },
+  {
+    "id": 4,
+    "name": "Spodnie Jeans",
+    "price": 129,
+    "image": "img/jeans.jpg",
+    "sizes": ["30", "32", "34"]
+  },
+  {
+    "id": 5,
+    "name": "Kurtka Zimowa",
+    "price": 299,
+    "image": "img/kurtka.jpg",
+    "colors": ["navy", "brown"]
+  },
+  {
+    "id": 6,
+    "name": "Czapka Zimowa",
+    "price": 49,
+    "image": "img/czapka.jpg"
+  }
+]
